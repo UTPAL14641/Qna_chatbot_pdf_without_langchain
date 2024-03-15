@@ -1,0 +1,6 @@
+chromadb
+PyPDF2
+python-dotenv
+fastapi
+uvicorn
+streamlit

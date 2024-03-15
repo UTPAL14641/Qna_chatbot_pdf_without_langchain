@@ -1,0 +1,28 @@
+version: "3.8"
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: DockerFile
+    ports:
+      - "8000:8000"
+    environment:
+      - ENV=local
+    networks:
+      - qna_network
+
+  frontend:
+    build:
+      context: ./Frontend
+      dockerfile: DockerFile
+    ports:
+      - "8501:8501"
+    environment:
+      - ENV=local
+    networks:
+      - qna_network
+
+networks:
+  qna_network:
+    driver: bridge
