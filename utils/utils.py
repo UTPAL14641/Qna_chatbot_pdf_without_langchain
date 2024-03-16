@@ -36,20 +36,9 @@ def verify_pdf_path(file_path):
     
 
 def get_text_chunks(text: str, word_limit: int) -> List[str]:
-    """
-    Divide a text into chunks with a specified word limit while ensuring each chunk contains complete sentences.
-    
-    Parameters:
-        text (str): The entire text to be divided into chunks.
-        word_limit (int): The desired word limit for each chunk.
-    
-    Returns:
-        List[str]: A list containing the chunks of texts with the specified word limit and complete sentences.
-    """
     sentences = re.split(r'(?<!\w\.\w.)(?<![A-Z][a-z]\.)(?<=\.|\?)\s', text)
     chunks = []
     current_chunk = []
-
     for sentence in sentences:
         words = sentence.split()
         if len(" ".join(current_chunk + words)) <= word_limit:
@@ -57,7 +46,6 @@ def get_text_chunks(text: str, word_limit: int) -> List[str]:
         else:
             chunks.append(" ".join(current_chunk))
             current_chunk = words
-
     if current_chunk:
         chunks.append(" ".join(current_chunk))
     return chunks
