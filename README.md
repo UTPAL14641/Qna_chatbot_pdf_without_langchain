@@ -26,8 +26,7 @@ This project is a full-stack application designed to answer your questions about
 1. **Clone the repository:**
 
    ```bash
-   git clone [https://github.com/your-username/pdf-question-answering-app.git](https://github.com/UTPAL14641/Qna_chatbot_pdf_without_langchain.git)
-
+   git clone [https://github.com/UTPAL14641/Qna_chatbot_pdf_without_langchain.git](https://github.com/UTPAL14641/Qna_chatbot_pdf_without_langchain.git)
 2. **Create a virtual environment (recommended):**
    ```Bash
    conda create --name pdf-qa-env python=3.11.5 -y
