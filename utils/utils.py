@@ -13,6 +13,7 @@ if HUGGING_FACE_TOKEN is None:
     raise ValueError("Missing environment variable HUGGING_FACE_TOKEN")
 API_URL = "https://api-inference.huggingface.co/models/mistralai/Mistral-7B-Instruct-v0.2"
 headers = {"Authorization": f"Bearer {HUGGING_FACE_TOKEN}"}
+
 def query(payload):
 	response = requests.post(API_URL, headers=headers, json=payload)
 	return response.json()
