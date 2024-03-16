@@ -54,7 +54,7 @@ This project is a full-stack application designed to answer your questions about
    ```Bash
    docker-compose logs
 This will display the combined logs from all running services defined in your docker-compose.yml file
-6. You can also specify the name of a particular service to view its individual logs:
+6. **You can also specify the name of a particular service to view its individual logs:**
   ```Bash
 docker-compose logs <service_name>
 
