@@ -1,7 +1,9 @@
 import streamlit as st
 import requests, json
 import os
-
+import pysqlite3
+import sys
+sys.modules["sqlite3"] = sys.modules.pop("pysqlite3")
 def handle_file_upload():
   uploaded_file = st.file_uploader("Upload PDF", type="pdf")
   if uploaded_file is not None:

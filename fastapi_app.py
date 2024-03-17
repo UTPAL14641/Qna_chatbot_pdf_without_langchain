@@ -1,6 +1,9 @@
 import os
 import PyPDF2
 import re
+import pysqlite3
+import sys
+sys.modules["sqlite3"] = sys.modules.pop("pysqlite3")
 from chromadb import Client, Settings
 from chromadb.utils import embedding_functions
 from PyPDF2 import PdfReader
